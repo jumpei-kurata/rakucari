@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+#form2{
+position:relative;
+max-width:300px;	
+margin-bottom:20px;
+}
+#sbox2{
+height:50px;
+padding:0 10px; 
+position:absolute; 
+left:0;
+top:0; 
+border-radius:2px;
+outline:0;
+background:#eee;	
+}
+#sbtn2{
+height:50px;
+position:absolute; 
+left:255px;/*アイコン左右の位置調整*/
+top:0;
+background:none;
+color:#666;
+border:none;
+font-size:20px;/*アイコンサイズ*/
+}
+#sbtn5:hover{
+color:#7fbfff;
+}

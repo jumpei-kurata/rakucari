@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>footer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- アイコン使用のためfont awesomeをCDN形式で読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="col-10" id="navbarNavAltMarkup">
+　　　　　　　<!--↓今回書き加えたのはここだけ！↓-->
+        <div class="navbar-nav w-100 nav-justified">
+         <div style="width: 300px;">
+          <span class="nav-item nav-link active font-weight-bold" style="margin-right: 100px;" href="#">メルカリについて</span>
+          <ul style="list-style: none; padding-left: 35px;">
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >会社概要（運営会社）</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >採用情報</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >プレスリリース</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >公式ブログ</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >プレスキット</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >メルカリUS</a></li>
+          </ul>
+         </div>
+         <div>
+          <span class="nav-item nav-link active font-weight-bold" style="margin-right: 70px;" href="#">ヘルプ＆ガイド</span>
+          <ul style="list-style: none; padding-left: 70px;">
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >メルカリガイド</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >らくらくメルカリ便</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >ゆうゆうメルカリ便</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >梱包・発送たのメル便</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >車体取引ガイド</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >メルカリあんしん・あんぜん宣言！</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >偽ブランド品撲滅への取り組み</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >お問い合わせ</a></li>
+          </ul>
+         </div>
+		 <div>
+          <span class="nav-item nav-link active font-weight-bold" style="margin-right: 40px;" href="#">プライバシーと利用規約</span>
+          <ul style="list-style: none; padding-left: 70px;">
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >プライバシーポリシー</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >メルカリ利用規約</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >コンプライアンスポリシー</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >個人データの安全管理にかかる基本方針</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >特定商取引に関する表記</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >資金決済法に基づく表示</a></li>
+          	<li style="padding-top: 4px; padding-bottom: 4px;"><a th:href="@{}" method="get" >法令順守と犯罪抑止のために</a></li>
+          </ul>
+         </div>
+          <span class="nav-item nav-link active" href="#"></span>
+        </div>
+      </div>
+    </nav>
+    
+	<nav class="navbar navbar-light bg-light p-4">
+	<hr width="100%">
+	  <div class="container col-1" style="margin-left: inherit;">
+	   <a th:href="@{}" class=""></a>
+	   <a th:href="@{}" class="fab fa-twitter fa-2x"></a>
+	   <a th:href="@{}" class="fab fa-facebook fa-2x"></a>
+	  </div>
+	   <div style="opacity: 0.7;">©Rakucari, inc.</div>
+	</nav>
+
+	    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+</body>
+</html>
+

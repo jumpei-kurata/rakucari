@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+ 
+<!--     Bootstrap CSS -->
+<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<!--  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<!--  	<link th:href="@{/css/header.css}" rel="styleSheet"> -->
+ 	
+    <title>rakucari</title>
+    
+<!-- 	<!-- アイコン使用のためfont awesomeをCDN形式で読み込み --> 
+<!--     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet"> -->
+
+</head>
+<body>
+
+<div th:insert="header :: frag_header"></div>
+<!-- ↑まだ動的じゃないから動かないのかも -->
+
+	<p style="text-align:center">
+	<img th:src="@{../static/image/image.jpg}" src="../static/image/image.jpg" width="70%">
+	</p>
+
+</body>
+</html>
