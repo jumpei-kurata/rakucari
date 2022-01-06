@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link th:href="@{/css/header.css}" rel="styleSheet">
+ 	
+    <title>rakucari</title>
+    
+	<!-- アイコン使用のためfont awesomeをCDN形式で読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white mt-2 p-1" style="max-height: 40	px;">
+  <div class="container-fluid">
+    <a class="navbar-brand fas fa-parachute-box fa-2x fa-fw"  style="color:red" href="#" value="rakucari"><font color="black" size="5" face="Comic Sans MS">&nbsp;rakucari</font></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+ </nav>
+<hr>
+
+<main class="main">
+ <div tabindex="-1" style="outline: none;">
+  <div tabindex="-1" style="outline: none;">
+   <div class="">
+	<nav class="nav flex-column">
+	 <h3 style="text-align: center;">会員登録</h3>
+	  <div class="d-grid gap-2 col-6 mx-auto" style="text-align: center;">
+	   <div>&nbsp;</div>
+		 <a th:href="@{}" href="#">
+		  <button class="btn btn-danger w-75"><div style="text-align: left;"><i class="far fa-envelope"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4">メールアドレスで登録する</font></span></div></button>
+		 </a>
+	     <div>&nbsp;</div>
+		 <a th:href="@{}" href="#">
+		  <button class="btn btn-outline-dark w-75"><div style="text-align: left;"><i class="fab fa-google"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4">Googleで登録する</font></span></div></button>
+		 </a>
+	     <div>&nbsp;</div>
+		 <a th:href="@{}" href="#">
+		  <button class="btn btn-primary w-75"><div style="text-align: left;"><i class="fab fa-facebook"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4">Facebookで登録する</font></span></div></button>
+		 </a>
+	     <div>&nbsp;</div>
+		 <a th:href="@{}" href="#">
+		  <button class="btn btn-dark w-75"><div style="text-align: left;"><i class="fab fa-apple"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4">Appleで登録する</font></span></div></button>
+		 </a>
+	     <div>&nbsp;</div>
+		<h6><font color="black" size="1.8" face="Comic Sans MS">登録またはログインすることで、<a th:href="@{}" href="">利用規約とプライバシーポリシー</a>に同意したものとみなされます。</font></h6>
+	     <div>&nbsp;</div>
+	     <hr width="80%" size="100%">
+	     <div>&nbsp;</div>
+	    <h6 style="text-align: center;">アカウントをお持ちの方</h6>
+	     <div>&nbsp;</div>
+	     <a th:href="@{}" href="#">
+		  <button class="btn btn-outline-danger w-75"><div style="text-align: center;"><span><font size="4" face="Impact">ログイン</font></span></div></button>
+		 </a>
+	  </div>
+	</nav>
+   </div>
+  </div>
+ </div>
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

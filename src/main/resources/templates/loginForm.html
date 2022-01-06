@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,10 +14,11 @@
     
 	<!-- アイコン使用のためfont awesomeをCDN形式で読み込み -->
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
-  </head>
-  <body>
-  
+</head>
+<body>
+
 <div th:fragment="frag_header">
+
  <nav class="navbar navbar-expand-lg navbar-light bg-white mt-2 p-1" style="max-height: 40	px;">
   <div class="container-fluid">
     <a class="navbar-brand fas fa-parachute-box fa-2x fa-fw"  style="color:red" href="#" value="rakucari"><font color="black" size="5" face="Comic Sans MS">&nbsp;rakucari</font></a>
@@ -33,21 +34,51 @@
 <!-- 		  <input type="submit" value="検索"> -->
 <!-- 		</form> -->
 <!-- 	　　↑css読み込めない　なんで、、、 -->
-		
-    <form class="d-flex col-5">
-      <input class="form-control me-2" type="search" placeholder="なにをお探しですか？" aria-label="Search">
-      <input type="submit" value="&#xf002;" class="fa" id="searchsubmit">
-<!--       <button class="btn btn-outline-danger" type="submit">検索</button> -->
-    </form>
-      <span class="navbar-nav col3">
-        <a class="nav-link active" href="#">お知らせ</a>
-        <a class="nav-link active" href="#">ログイン</a>
-        <a class="nav-link active" href="#">会員登録&nbsp;&nbsp;</a>
-		<button type="button" class="btn btn-danger">出品</button>
-      </span>
   </div>
  </nav>
 <hr>
+
+<main class="main">
+ <div tabindex="-1" style="outline: none;">
+  <div tabindex="-1" style="outline: none;">
+   <div class="">
+	<nav class="nav flex-column">
+	 <h4 style="text-align: center;"><strong>ログイン<strong></strong></h4>
+	  <div class="d-grid gap-2 col-6 mx-auto" style="text-align: center;">
+	  
+	  <form style="text-align: initial;">
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"　>
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">パスワード</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+</form>
+	  
+	   <div>&nbsp;</div>
+	     <a th:href="@{}" href="#">
+		  <button class="btn btn-danger w-75"><div style="text-align: center;"><span><font size="4" face="Impact">ログイン</font></span></div></button>
+		 </a>
+		 <br>
+		<h4 style="margin-left: 300px;"><font color="black" size="2.7" face="Comic Sans MS"><a th:href="@{}" href="">パスワードを忘れた方はこちら&nbsp;&nbsp;＞</font></a></h4>
+		<h6><font color="black" size="1.8" face="Comic Sans MS">このサイトはreCAPTHAで保護されており、Googleの<a th:href="@{}" href="">プライバシーポリシーと利用規約</a>が適用されます。</font></h6>
+	     <div>&nbsp;</div>
+	     <div>&nbsp;</div>
+	  </div>
+	</nav>
+   </div>
+  </div>
+ </div>
+</main>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -55,5 +86,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </div>
-  </body>
+</body>
 </html>

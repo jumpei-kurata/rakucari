@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+ 
+<!--     Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link th:href="@{/css/header.css}" rel="styleSheet">
+ 	
+    <title>rakucari</title>
+    
+	<!-- アイコン使用のためfont awesomeをCDN形式で読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div th:insert="header :: frag_header"></div>
+<!-- ↑まだ動的じゃないから動かないのかも -->
+
+   <a href="#" th:href="@{}">
+	<p style="text-align: center;">
+	 <img th:src="@{../static/image/image.jpg}" src="../static/image/image.jpg" width="75%" style="height: 350px;">
+	</p>
+   </a>
+   <br>
+   <br>
+   
+   	<!-- table -->
+<main style="margin-left: auto; margin-right: auto; width: 90%;">
+   <div>
+	<div class="row justify-content-around">
+		<div
+			class="
+            table-responsive
+            col-lg-offset-1
+            col-lg-10
+            col-md-offset-1
+            col-md-10
+            col-sm-10
+            col-xs-12
+          ">
+          <ul style="
+          			 list-style: none;
+          			 margin: 0;
+          			 padding: 0;
+          			 display: grid;
+          			 grid-gap: var(--grid-layout-gutter);
+          			 grid-template-columns: repeat(5, 1fr);
+          			 box-sizing: border-box;
+          			 --grid-layout-gutter: 24px;
+				     --grid-layout-inset: 16px;
+				     --grid-layout-page-padding-top: 40px;
+				     --grid-layout-page-padding-bottom: 64px;
+				     --grid-layout-page-padding-horizontal: 36px;
+				     --mer-z-index-menu: 1100;
+				     --mer-z-index-navigation-top: 1200;
+				     --mer-z-index-navigation-bottom: 1200;
+				     --mer-z-index-autocomplete: 1300;
+				     --mer-z-index-action-sheet: 1400;
+				     --mer-z-index-side-sheet: 1400;
+				     --mer-z-index-information-popup: 1400;
+				     --mer-z-index-modal: 1400;
+				     --mer-z-index-dialog: 1400;
+				     --mer-z-index-snackbar: 1500;
+				     --mer-z-index-tooltip: 1600;
+				     margin-block-start: 1em;
+				     margin-block-end: 1em;
+				     margin-inline-start: 0px;
+				     margin-inline-end: 0px;
+/* 				     padding-inline-start: 40px; */
+          ">
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari1.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari2.jpg"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari3.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari4.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari5.jpg"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari6.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+               
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari1.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari2.jpg"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari3.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari4.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari5.jpg"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari6.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+               
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari1.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari2.jpg"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari3.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari4.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari5.jpg"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+
+         	  <li>
+                <div th:each="item:${itemList}"  style="position: relative;">
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}" href="#">
+                    <img
+                      src="../static/image/rakucari6.png"
+                      th:src="@{'../static/image/'+${item.imagePath}}"
+                      class="img-responsive img-rounded item-img-center"
+                      style="
+/* 		                      position: absolute; */
+						      top: 0px;
+						      left: 0px;
+						      width: 200px;
+						      height: 200px;
+						      margin: auto;
+						      object-fit: contain;
+						      transition-timing-function: ease-in-out;
+						      transition-duration: 0.1s;
+						      transition-property: opacity;
+                    "/> 
+					<span style="
+			                    position: absolute;
+							    top: 150px;
+							    left: 0;
+							    padding: 3px; 
+							    margin-bottom: 10px; 
+/* 							    border: 1px solid #333333;  */
+							    /* 左上 | 右上 | 右下 | 左下 */
+							    border-radius: 0px 13px 13px 0px; 
+ 							    background-color: rgba(0, 0, 0, 0.4); 
+ 							    color: white;
+ 							    font-weight:bold;
+ 							    /* 透け感 */
+/*  							opacity: 0.3; */
+					">¥3,000</span>
+                  </a>
+                  <br>
+                  <a th:href="@{/shop/showDetail?id=} + ${item.id}"><span th:text="${item.name}">じゃがバターベーコン</span></a>
+                  <br>
+                 </div>
+               </li>
+               
+         </ul>
+		</div>
+	</div>
+   </div>
+	<br>
+	<br>
+</main>
+   
+</body>
+</html>
