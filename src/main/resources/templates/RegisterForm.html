@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link th:href="@{../static/css/header.css}" rel="styleSheet">
+ 	
+    <title>rakucari</title>
+    
+	<!-- アイコン使用のためfont awesomeをCDN形式で読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:fragment="frag_header">
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-white mt-2 p-1" style="max-height: 40	px;">
+  <div class="container-fluid">
+    <a class="navbar-brand fas fa-parachute-box fa-2x fa-fw"  style="color:red" href="#" value="rakucari"><font color="black" size="5" face="Comic Sans MS">&nbsp;rakucari</font></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!--     	<form id="form2" action="自分のサイトURL" method="get"> -->
+<!-- 		<input id="sbox2"  id="s" name="s" type="text" placeholder="フリーワードを入力"/> -->
+<!-- 		<button type="submit" id="sbtn2"><i class="fas fa-search"></i></button> -->
+<!-- 		</form> -->
+<!-- 		<form method="get" action="#" class="search_container d-flex col-5"> -->
+<!-- 		  <input class="search_container　form-control me-2" type="text" size="25" placeholder="なにをお探しですか？"> -->
+<!-- 		  <input type="submit" value="検索"> -->
+<!-- 		</form> -->
+<!-- 	　　↑css読み込めない　なんで、、、 -->
+  </div>
+ </nav>
+<hr>
+
+<main class="main">
+ <div tabindex="-1" style="outline: none;">
+  <div tabindex="-1" style="outline: none;">
+   <div class="">
+	<nav class="nav flex-column">
+	 <h4 style="text-align: center;"><strong>会員登録<strong></strong></h4>
+	  <div class="d-grid gap-2 col-6 mx-auto" style="text-align: center;">
+	  
+	  <form style="text-align: initial;">
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputEmail1" class="form-label">名前</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"　>
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">ニックネーム</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">メールアドレス</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">郵便番号</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">住所</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">電話番号</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">パスワード</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 w-75" style="
+							    margin-left: auto;
+							    margin-right: auto;
+							">
+    <label for="exampleInputPassword1" class="form-label">パスワード（確認用）</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+</form>
+	  
+	   <div>&nbsp;</div>
+	     <a th:href="@{}" href="#">
+		  <button class="btn btn-danger w-75"><div style="text-align: center;"><span><font size="4" face="Impact">登録</font></span></div></button>
+		 </a>
+		 <br>
+		<h6><font color="black" size="1.8" face="Comic Sans MS">このサイトはreCAPTHAで保護されており、Googleの<a th:href="@{}" href="">プライバシーポリシーと利用規約</a>が適用されます。</font></h6>
+	     <div>&nbsp;</div>
+	     <div>&nbsp;</div>
+	  </div>
+	</nav>
+   </div>
+  </div>
+ </div>
+</main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>	
